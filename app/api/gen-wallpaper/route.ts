@@ -1,4 +1,3 @@
-import { downloadAndUploadImage } from "@/lib/s3";
 import { insertWallpaper } from "@/models/wallpaper";
 import { getOpenAIClient } from "@/service/openai"
 import { Wallpaper } from "@/types/wallpaper";
