@@ -1,8 +1,10 @@
+import { downloadAndUploadImage } from "@/lib/s3";
 import { insertWallpaper } from "@/models/wallpaper";
 import { getOpenAIClient } from "@/service/openai"
 import { Wallpaper } from "@/types/wallpaper";
 import { ImageGenerateParams } from "openai/resources/images.mjs";
-import { currentUser } from '@clerk/nextjs/server'
+import { auth, currentUser } from '@clerk/nextjs/server'
+import { insertUser } from "@/models/user";
 import { User } from "@/types/user";
 
 export async function POST(req:Request){
